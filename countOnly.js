@@ -54,13 +54,3 @@ assertEqual(result1["Jason"], 1);
 assertEqual(result1["Karima"], undefined);
 assertEqual(result1["Fang"], 2);
 assertEqual(result1["Agouhanna"], undefined);
-
-const myobj = {
-  Jason: true,
-  Karima: true,
-  Fang: true,
-  Agouhanna: false,
-};
-for (const key in myobj) {
-  console.log(myobj[key]);
-}
