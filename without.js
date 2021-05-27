@@ -1,11 +1,3 @@
-const assertEqual = function (actual, expected) {
-  if (actual === expected) {
-    console.log(`✅ ✅ ✅ Assertion Passed ${actual} === ${expected}`);
-  } else {
-    console.log(`🛑 🛑 🛑 Assertion failed ${actual} != ${expected}`);
-  }
-};
-
 const eqArrays = (array1, array2) => {
   let match = true;
   for (let index = 0; index < array1.length; index++) {
@@ -16,24 +8,31 @@ const eqArrays = (array1, array2) => {
   return match;
 };
 
+// Task 1 - sends array1,array2 to eqArrays
+// Task 2 - if eqArrays returns true then we print that it passed otherwise return error
 const assertArraysEqual = (array1, array2) => {
-  assertEqual(eqArrays(array1, array2), true);
+  if (eqArrays(array1, array2)) {
+    console.log(`✅ ✅ ✅ Assertion Passed`);
+  } else {
+    console.log(`🛑 🛑 🛑 Assertion failed`);
+  }
 };
 
+// Task 1 - store source array to temp array
+// Task 2 - compare each element from itemsToRemoveArray to source Array
+// Task 3 - if item  from itemsToRemoveArray exists in resultArray then remove
 const without = (source, itemsToRemove) => {
-  let resultArray = [];
-  for (let i = 0; i < source.length; i++) {
-    for (let j = 0; j < itemsToRemove.length; j++) {
-      if (source[i] !== itemsToRemove[j]) {
-        resultArray.push(source[i]);
+  let resultArray = source;
+  for (let i = 0; i < itemsToRemove.length; i++) {
+    for (let j = 0; j < resultArray.length; j++) {
+      if (resultArray[j] === itemsToRemove[i]) {
+        resultArray.splice(j,1);
       }
     }
   }
+  return resultArray;
 };
-without([1, 2, 3], [1]); // => [2, 3]
-without(["1", "2", "3"], [1, 2, "3"]); // => ["1", "2"]
 
-const words = ["hello", "world", "lighthouse"];
-console.log(without(words, ["lighthouse"])); // no need to capture return value for this test case
-// Make sure the original array was not altered by the without function
-assertArraysEqual(words, ["hello", "world", "lighthouse"]);
+assertArraysEqual(without([1, 2, 3], [1]),[2, 3]);
+assertArraysEqual(without(["1", "2", "3"], [1, 2, "3"]),["1", "2"]);
+assertArraysEqual(without([1, 2, 3], [2]), [1, 3]);
