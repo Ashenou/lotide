@@ -7,14 +7,20 @@ const assertEqual = function (actual, expected) {
 };
 
 // Search for a key in an object where its value matches a given value.
+// const findKeyByValue = (object, searchValue) => {
+//   for (const key in object) {
+//     if (object[key] === searchValue) {
+//       return key;
+//     }
+//   }
+// };
 const findKeyByValue = (object, searchValue) => {
-  for (const key in object) {
+  for (const key of Object.keys(object)) {
     if (object[key] === searchValue) {
       return key;
     }
   }
 };
-
 const bestTVShowsByGenre = {
   sci_fi: "The Expanse",
   comedy: "Brooklyn Nine-Nine",
