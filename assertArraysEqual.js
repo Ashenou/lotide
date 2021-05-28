@@ -1,11 +1,14 @@
 const eqArrays = (array1, array2) => {
   let match = true;
-  for (let index = 0; index < array1.length; index++) {
-    if (array1[index] !== array2[index]) {
-      match = false;
+  if (array1.length === array2.length) {
+    for (let index = 0; index < array1.length; index++) {
+      if (array1[index] !== array2[index]) {
+        match = false;
+      }
     }
+    return match;
   }
-  return match;
+  return false;
 };
 // Task 1 - sends array1,array2 to eqArrays
 // Task 2 - if eqArrays returns true then we print that it passed otherwise return error
