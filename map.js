@@ -17,6 +17,7 @@ const assertArraysEqual = (array1, array2) => {
     console.log(`🛑 🛑 🛑 Assertion failed`);
   }
 };
+
 const words = ["ground", "control", "to", "major", "tom"];
 const map = function(array, callback) {
   // temporary code:
@@ -36,5 +37,3 @@ console.log(`word`, word);
 //assertArraysEqual(word, ["g", "c", "t", "m", "t"]);
 assertArraysEqual(word, ["r", "o", "o", "a", "o"]);
 //assertArraysEqual(word, ["g", "c", "t", "m", "t"]);
-
-
