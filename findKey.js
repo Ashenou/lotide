@@ -6,7 +6,7 @@ const assertEqual = function (actual, expected) {
   }
 };
 const findKey = (obj, callBack) => {
- // Gets key for each item in object
+  // Gets key for each item in object
   for (const item in obj) {
     // Gets the value(nested object) of the key in parent object(x.stars) and runs it towards the call back function that has a condition if the condtion is true and the callback returns true then it returns the item of that key.
     if (callBack(obj[item])) {
