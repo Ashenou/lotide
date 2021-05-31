@@ -5,17 +5,17 @@
 // Task 2 -  loop through the keys returned by Object.keys for one of the objects (not both), Use for..of.
 // Task 3 - check if an array exists and send it to eqArrays to be checked if it returned false then exit
 // Task 3 - Our control flow will therefore only get to the end of the loop if all the keys matched.
-const eqArrays = (array1, array2) => {
-  let match = true;
-  if (array1.length === array2.length) {
-    for (let index = 0; index < array1.length; index++) {
-      if (array1[index] !== array2[index]) {
-        match = false;
-      }
-    }
-    return match;
+const eqArrays = require("./eqArrays");
+
+
+const assertObjectsEqual = function(actual, expected) {
+
+  const inspect = require("util").inspect;
+  if (eqObjects(actual, expected)) {
+    console.log(`✅ ✅ ✅ Assertion Passed`, actual + "===" + expected);
+  } else {
+    console.log(`🛑 🛑 🛑 Assertion failed`, actual + "!==" + expected);
   }
-  return false;
 };
 
 const eqObjects = function (object1, object2) {
@@ -34,17 +34,6 @@ const eqObjects = function (object1, object2) {
     return true;
   }
   return false;
-};
-
-// FUNCTION IMPLEMENTATION
-const assertObjectsEqual = function(actual, expected) {
-  // Implement me!
-  const inspect = require('util').inspect;
-  if (eqObjects(actual, expected)) {
-    console.log(`✅ ✅ ✅ Assertion Passed`,actual + "===" + expected);
-  } else {
-    console.log(`🛑 🛑 🛑 Assertion failed`, actual + "!==" + expected);
-  }
 };
 
 const ab = { a: "1", b: "2" };

@@ -1,26 +1,5 @@
-const assertEqual = function (actual, expected) {
-  if (actual === expected) {
-    console.log(`✅ ✅ ✅ Assertion Passed ${actual} === ${expected}`);
-  } else {
-    console.log(`🛑 🛑 🛑 Assertion failed ${actual} != ${expected}`);
-  }
-};
-
-
-// Task 1 - Checks if the arrays have the same length
-// Task 2 - Check if every element matches the element at the same index on the other array
-const eqArrays = (array1, array2) => {
-  let match = true;
-  if (array1.length === array2.length) {
-    for (let index = 0; index < array1.length; index++) {
-      if (array1[index] !== array2[index]) {
-        match = false;
-      }
-    }
-    return match;
-  }
-  return false;
-};
+const assertEqual = require('./assertEqual');
+const eqArrays = require('./eqArrays');
 
 // Returns true if both objects have identical keys with identical values.
 // Otherwise you get back a big fat false!

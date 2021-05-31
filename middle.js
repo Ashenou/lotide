@@ -1,21 +1,4 @@
-const eqArrays = (array1, array2) => {
-  let match = true;
-  for (let index = 0; index < array1.length; index++) {
-    if (array1[index] !== array2[index]) {
-      match = false;
-    }
-  }
-  return match;
-};
-// Task 1 - sends array1,array2 to eqArrays
-// Task 2 - if eqArrays returns true then we print that it passed otherwise return error
-const assertArraysEqual = (array1, array2) => {
-  if (eqArrays(array1, array2)) {
-    console.log(`✅ ✅ ✅ Assertion Passed`);
-  } else {
-    console.log(`🛑 🛑 🛑 Assertion failed`);
-  }
-};
+const assertArraysEqual = require(`./assertArraysEqual`);
 // Task 1 - return element in the middle
 // Edge case 1 - arrays with 1 or 2 elements return empty array
 // Edge case 2 - Arrays with odd numbers return the element in the middle
@@ -36,10 +19,11 @@ const middle = (array) => {
     return midArray;
   }
 };
-console.log(middle([1])); // => []
-console.log(middle([1, 2])); // => []
-console.log(middle([1])); // => []
-console.log(middle([1, 2])); // => []
-console.log(middle([1, 2, 3, 4])); // => [2, 3]
-console.log(middle([1, 2, 3, 4, 5, 6])); // => [3, 4]
-console.log(middle([1, 2, 3, 4, 5]));
+
+assertArraysEqual(middle([1]),[]); // => []
+assertArraysEqual(middle([1, 2]),[]); // => []
+assertArraysEqual(middle([1]),[]); // => []
+assertArraysEqual(middle([1, 2]),[]); // => []
+assertArraysEqual(middle([1, 2, 3, 4]),[2,3]); // => [2, 3]
+assertArraysEqual(middle([1, 2, 3, 4, 5, 6]),[3,4]); // => [3, 4]
+assertArraysEqual(middle([1, 2, 3, 4, 5]),[3]); // => [3]
