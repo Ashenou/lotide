@@ -1,6 +1,8 @@
 const assertArraysEqual = require('./assertArraysEqual');
+
 // Task 1 - loop through the sentence
-// Task 2 -
+// Task 2 - If the items exists we push the index to the results array
+
 const letterPositions = function(sentence) {
   const results = {};
   
@@ -17,8 +19,11 @@ const letterPositions = function(sentence) {
       }
     }
   }
+  console.log(results);
   return results;
 };
 
-//console.log(letterPositions("lighthouse in the house"));
-assertArraysEqual(letterPositions("hello").e, [1]);
+// Accessing the e key of the returned object
+console.log(letterPositions("lighthouse in the house").e);
+
+//assertArraysEqual(letterPositions("hello").e, [1]);

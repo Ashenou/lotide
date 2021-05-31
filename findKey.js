@@ -1,5 +1,6 @@
 const assertEqual = require('./assertEqual');
 
+// Find which key has the requested value
 const findKey = (obj, callBack) => {
   // Gets key for each item in object
   for (const item in obj) {

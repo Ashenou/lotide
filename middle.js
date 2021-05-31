@@ -1,4 +1,5 @@
 const assertArraysEqual = require(`./assertArraysEqual`);
+
 // Task 1 - return element in the middle
 // Edge case 1 - arrays with 1 or 2 elements return empty array
 // Edge case 2 - Arrays with odd numbers return the element in the middle
