@@ -23,7 +23,8 @@ const letterPositions = function(sentence) {
   return results;
 };
 
-// Accessing the e key of the returned object
+// Because we are returning an object the ".e" is to access the value of the "e" key
+
 console.log(letterPositions("lighthouse in the house").e);
 
 //assertArraysEqual(letterPositions("hello").e, [1]);
