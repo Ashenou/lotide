@@ -1,3 +1,4 @@
+const { assert } = require("chai");
 const assertEqual = require("./assertEqual");
 
 // Returns object that counts values for each letter and creates a key value
@@ -19,8 +20,4 @@ const countLetters = (stringOfletters) => {
   }
   return countedLetters;
 };
-
-const result1 = countLetters("Lighthouse in the house");
-
-assertEqual(result1["L"], 1);
-assertEqual(result1["h"], 4);
+module.exports = countLetters;
