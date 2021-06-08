@@ -1,8 +1,9 @@
 {
-  "name": "lotide",
+  "name": "@ashenou/lotide",
+
   "version": "1.0.0",
-  "description": "",
-  "main": "assertArraysEqual.js",
+  "description": "lotide is a clone to lodash package",
+  "main": "index.js",
   "directories": {
     "test": "test"
   },
@@ -13,10 +14,11 @@
     "type": "git",
     "url": "git+https://github.com/Ashenou/lotide.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Abanoub",
+  "license": "BSD-3-Clause",
   "bugs": {
-    "url": "https://github.com/Ashenou/lotide/issues"
+    "url": "https://github.com/Ashenou/lotide/issues",
+    "email" : "abanopamir@gmail.com"
   },
   "homepage": "https://github.com/Ashenou/lotide#readme",
   "devDependencies": {
